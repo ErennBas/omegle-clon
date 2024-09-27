@@ -1,0 +1,19 @@
+.video {
+	display: flex;
+	justify-content: center;
+}
+
+.video:hover select {
+	display: block;
+}
+
+.video select {
+	position: absolute;
+	margin-top: 5px;
+	display: none;
+}
+
+.video video {
+	object-fit: cover;
+	transform: rotateY(180deg);
+}

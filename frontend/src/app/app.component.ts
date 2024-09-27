@@ -1,13 +1,18 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
+import { logos } from './images';
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'frontend';
+export class AppComponent implements OnInit {
+
+	images = logos;
+
+	matchStatus = false;
+
+	constructor() {}
+
+	async ngOnInit(): Promise<void> {}
 }

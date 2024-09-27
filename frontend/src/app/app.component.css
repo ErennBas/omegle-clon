@@ -1,0 +1,197 @@
+header {
+	background-color: white;
+	height: 76px;
+}
+
+main {
+	padding: 20px;
+	display: flex;
+	height: calc(100vh - 76px);
+}
+
+.cont {
+	height: 70px;
+	max-width: 100%;
+	padding: 0 20px;
+}
+
+.logo {
+	height: 57px;
+}
+
+.logo2 {
+	height: 30px;
+	margin-left: 20px;
+	animation: heartBeat 1s infinite;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-delay: 0s;
+}
+
+.left {
+	padding: 0 20px;
+}
+
+#navbarHeader {
+	display: none;
+}
+
+.github-button {
+	font-size: 40px;
+	transition: transform 0.3s;
+}
+
+.github-button:hover {
+	transform: scale(1.3);
+}
+
+.video-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.stranger-video {
+	height: 49%;
+	background-color: #5b5e5a;
+	border-radius: 5px;
+}
+
+.my-video {
+	height: 49%;
+	background-color: #5b5e5a;
+	border-radius: 5px;
+}
+.not-match {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.not-match img {
+	width: 80px;
+	height: 80px;
+}
+
+.chat {
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+}
+
+.messages {
+	flex: 1;
+	border-radius: 5px;
+	border: solid 1px #d6d6d6;
+	background-color: #fff;
+	padding: 20px;
+	margin-bottom: 1.33rem;
+}
+
+.messages .you {
+	color: blue;
+	font-weight: bold;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+.welcome {
+	margin-bottom: 10px;
+}
+
+.messages .stranger {
+	color: red;
+	font-weight: bold;
+	margin-right: 3px;
+	margin-bottom: 3px;
+}
+
+.message {
+	display: flex;
+}
+
+.message .m {
+	margin: 0;
+}
+
+.actions {
+	height: 100px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.input {
+	flex: 1;
+	margin: 0 12px;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #0000000f;
+	border: solid 1px #d6d6d6;
+	background-color: #fff;
+	overflow: hidden;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.input textarea {
+	box-sizing: border-box;
+	border: none;
+	height: 100%;
+	width: 100%;
+	resize: none;
+	font-size: 16px;
+	letter-spacing: -0.2px;
+	padding: 10px;
+}
+
+.send .btn {
+	width: 120px;
+	height: 100%;
+}
+
+.action .btn {
+	width: 120px;
+	height: 100%;
+}
+
+.action-text {
+	font-size: 16px;
+	font-weight: 500;
+	margin: 0;
+}
+
+@keyframes heartBeat {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(1.2);
+	}
+	20% {
+		transform: scale(1);
+	}
+	30% {
+		transform: scale(1.2);
+	}
+	40% {
+		transform: scale(1);
+	}
+}
+
+.no-video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.no-video img {
+	width: 80px;
+	height: 80px;
+}
