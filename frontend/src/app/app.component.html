@@ -13,12 +13,14 @@
 						<i class="bi bi-github"></i>
 					</a>
 				</div>
+				<button class="btn btn-warning" *ngIf="!user">Log in</button>
 			</div>
 		</div>
 	</div>
 </header>
 <main class="container-fluid main-content">
 	<div class="row w-100">
+		@if (user) {
 		<div class="col-4 video-container">
 			<div class="stranger-video">
 				<div class="not-match">
@@ -65,5 +67,57 @@
 				</div>
 			</div>
 		</div>
+		}
+		@else {
+		<div class="login">
+			<div class="desc">
+				<blockquote>
+					<p>
+						This project is completely open-source and aims for no financial gain.
+						All user data is kept private, and <strong>no messages, videos, or audio recordings</strong> are stored.
+					</p>
+					<p>
+						The <strong>frontend</strong> is built with <em>Angular 18</em>, and the <strong>backend</strong>
+						is developed using <em>NestJS</em>. For high traffic and performance needs, the project is
+						<strong>containerized</strong> and optimized with a <em>load balancer</em>.
+					</p>
+				</blockquote>
+				<div class="row d-flex justify-content-center" style="width: 50%;">
+					<h4 class="text-center">Start chatting:</h4>
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" class="btn btn-primary" style="font-size: 30px;">Video</button>
+				</div>
+			</div>
+		</div>
+		}
 	</div>
 </main>
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-body d-flex justify-content-center flex-wrap p-3 m-4">
+				<img src="logo.png">
+				<h5 style="font-size: 17px; margin-top: 5px;">Sign in for a world of connections and new friends</h5>
+				<form class="w-75" style="margin-top: 40px;">
+					<div class="mb-3">
+						<label for="email" class="form-label">Email</label>
+						<input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+					</div>
+					<div class="mb-3">
+						<label for="password" class="form-label">Password</label>
+						<input type="password" class="form-control" id="password">
+					</div>
+					<div class="buttons d-flex w-100 flex-column gap-3 mt-4">
+						<button class="btn btn-primary btn-lg w-100" style="font-size: 20px;">
+							Log In
+						</button>
+						<a href="http://localhost:3000/auth/google" class="btn btn-light d-flex align-items-center w-100" style="font-size: 20px;">
+							<img width="40px" [src]="images['googleLogo']">
+							Connect with Google
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

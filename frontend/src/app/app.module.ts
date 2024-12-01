@@ -1,24 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CookieService } from 'ngx-cookie-service';
+
+import { AppComponent } from './app.component';
 import { MyVideoComponent } from './components/my-video/my-video.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  MyVideoComponent
+		MyVideoComponent
 	],
 	imports: [
 		BrowserModule,
-		AppRoutingModule,
 		NgbModule,
-		FormsModule
+		FormsModule,
+		HttpClientModule
 	],
-	providers: [],
+	providers: [CookieService],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
